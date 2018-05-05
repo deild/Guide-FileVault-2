@@ -1,0 +1,358 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Implications et conclusion · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="chap8.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Cet article est divisé en plusieurs sections clés :</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="chap1.html">
+            
+                <a href="chap1.html">
+            
+                    
+                    Quatre moyens courants qu'un attaquant peut essayer pour déverrouiller et pour contourner le chiffrement FileVault 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chap2.html">
+            
+                <a href="chap2.html">
+            
+                    
+                    Comment l'attaquant tentera, réussira et échouera à déverrouiller/contourner le chiffrement FileVault 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chap3.html">
+            
+                <a href="chap3.html">
+            
+                    
+                    Activation du chiffrement complet du disque FileVault 2 (avec modifications de durcissement)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chap5.html">
+            
+                <a href="chap5.html">
+            
+                    
+                    Comment FileVault 2 protège contre les attaquants avec un accès physique à votre ordinateur Mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="chap6.html">
+            
+                <a href="chap6.html">
+            
+                    
+                    Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="chap7.html">
+            
+                <a href="chap7.html">
+            
+                    
+                    De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="chap8.html">
+            
+                <a href="chap8.html">
+            
+                    
+                    Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.8" data-path="chap9.html">
+            
+                <a href="chap9.html">
+            
+                    
+                    Implications et conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Implications et conclusion</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="implications--conclusion">Implications &amp; Conclusion</h2>
+<h3 id="properly-encrypted-data-can-defeat-any-adversary">Properly Encrypted Data Can Defeat Any Adversary</h3>
+<p>When the data on the disk is properly encrypted, such data cannot be accessed by any adversary. However, that alone isn&#x2019;t enough.</p>
+<p>We also need to establish the following:</p>
+<ul>
+<li>The encryption is strong</li>
+<li>Password is strong</li>
+<li>Password is not stored somewhere where the adversary is able to access</li>
+</ul>
+<p>When the aforementioned are embraced and implemented, all adversaries regardless how well-funded and skilled they are can be defeated.</p>
+<p>Of course, some additional modifications to OS settings are required:</p>
+<ul>
+<li>Disabling automatic login</li>
+<li>Creating a different password for the login keychain on Mac</li>
+<li>Remembering to lock the login keychain</li>
+<li>Never store the recovery key in your iCloud account with Apple</li>
+</ul>
+<p>All of these implementations and modifications will easily frustrate anyone that is interested in gaining access to the data on your Mac.</p>
+<p>The only way attackers can &#x201C;bypass the full-disk encryption&#x201D; is to subvert your computer by installing malware which is uncommon.</p>
+<p><a href="https://www.sunnyhoi.com/guide-to-encrypting-securing-mac-os-x-with-filevault-2/" target="_blank">https://www.sunnyhoi.com/guide-to-encrypting-securing-mac-os-x-with-filevault-2/</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chap8.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Implications et conclusion","level":"2.8","depth":1,"previous":{"title":"Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité","level":"2.7","depth":1,"path":"chap8.md","ref":"chap8.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap9.md","mtime":"2018-05-05T10:32:52.871Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-05T10:34:33.660Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
