@@ -1,10 +1,9 @@
-## What macOS And FileVault 2 Can’t Protect The Mac User From
+## De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur
 
-### Cold Boot Attacks
+### Attaques de démarrage à froid
 
-OS X and FileVault 2 cannot defend against Cold Boot attacks. This is because the encryption keys are stored in memory when the machine is powered on. For instance, the moment you entered your password on boot. This security issue isn’t limited to FileVault 2 full-disk encryption, but to all other software full-disk encryption tools. Thus, there isn’t a publicly acknowledged defensive software against Cold Boot attacks.
+macOS et FileVault 2 ne peuvent pas se défendre contre les attaques démarrage à froid (Cold Boot). En effet, les clés de cryptage sont stockées en mémoire lorsque la machine est sous tension. Par exemple, au moment où vous avez entré votre mot de passe au démarrage. Ce problème de sécurité ne se limite pas au chiffrement complet du disque FileVault 2, mais à tous les autres outils logiciels de chiffrement complet du disque. Ainsi, il n'y a pas de logiciel défensif publiquement reconnu contre les attaques de démarrage à froid.
 
-**For security and privacy purposes, power off the computer entirely when you don’t plan on using it.**
+**Pour des raisons de sécurité et de confidentialité, éteignez complètement l'ordinateur lorsque vous n'avez pas l'intention de l'utiliser.**
 
-![](/assets/guide-to-encrypting-mac-os-x-with-filevault-sixteen.jpg)
-
+![guide-to-encrypting-mac-os-x-with-filevault-sixteen](/assets/guide-to-encrypting-mac-os-x-with-filevault-sixteen.jpg)
