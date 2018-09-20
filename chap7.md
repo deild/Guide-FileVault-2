@@ -1,28 +1,27 @@
-## Using A Firmware Password On OS X For Security
+## Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité
 
-### Purpose In Enabling A Firmware Password On OS X
+### But de l'activation d'un mot de passe de firmware sur OS X
 
-Systems that run OS X can deploy a password for locking OS firmware settings and thwarting inadvertent alterations on firmware situated in a particular system.
+Les systèmes qui exécutent OS X peuvent déployer un mot de passe pour verrouiller les paramètres du firmware du système d'exploitation et empêcher toute modification involontaire du firmware situé dans un système particulier.
 
-The firmware password is recommended for thwarting motivated adversaries from booting from a different system volume, internal or external storage device other than the initial startup disk you’ve chosen.
+Le mot de passe du firmware est recommandé pour empêcher les adversaires motivés de démarrer à partir d'un volume système, d'un périphérique de stockage interne ou externe différent de celui du disque de démarrage initial que vous avez choisi.
 
-Notably, utilizing a firmware password thwarts deployment of catch keys to change the cascade of the boot process. Hence, a firmware password obstructs users who don’t possess the password from booting up from any disk other than your chosen startup disk which also prevents the capability to deploy the bulk of startup key combinations.
+Notamment, l'utilisation d'un mot de passe de firmware empêche le déploiement des clés de verrouillage pour modifier la cascade du processus de démarrage. Par conséquent, un mot de passe de firmware empêche les utilisateurs qui ne possèdent pas le mot de passe de démarrer à partir d'un disque autre que le disque de démarrage que vous avez choisi, ce qui empêche également la capacité de déployer la majorité des combinaisons de clés de démarrage.
 
-Furthermore, the firmware password is deployed to impede Direct Memory Access \(DMA\) through interfaces like FireWire. Remember that Target Disk Mode insists on DMA which a firmware password additionally forestalls its utilization on a system. If an adversary tries to mount a volume from an alternative computer that deploys Target Disk Mode, the firmware password has to be entered prior to mounting the volume from the target’s computer.
+De plus, le mot de passe du firmware est déployé pour empêcher l'accès direct à la mémoire \(DMA\) via des interfaces comme FireWire. Rappelez-vous que le mode disque cible insiste sur le DMA dont le mot de passe du firmware empêche également son utilisation sur un système. Si un adversaire tente de monter un volume à partir d'un autre ordinateur qui déploie le mode Target Disk, le mot de passe du firmaware doit être entré avant de monter le volume à partir de l'ordinateur de la cible.
 
-### How To Set A Firmware Password On An OS X System
+### Comment définir un mot de passe de firmware sur un système OS X
 
-* Boot into the macOS built-in recovery system by holding down Command \(⌘\)-R immediately after turning on your Mac via the power button.
-* The macOS Recovery utilities window will appear. From the menu bar, click on Utilities &gt; Firmware Password Utility.
-* Click “Turn On Firmware Password.”
-* Enter a firmware password that is strong and complex. Use a combination of words, symbols, and letters. Click “Set Password.” Memorize this password.
-* You may now exit the Firmware Password Utility. Restart Your Mac by clicking on the \(\) menu &gt; Restart.
+- Démarrez dans le système de récupération intégré de macOS en maintenant la touche Commande \(⌘\)-R enfoncée immédiatement après avoir allumé votre Mac via le bouton d'alimentation.
+- La fenêtre des utilitaires de récupération de macOS apparaîtra. Dans la barre de menu, cliquez sur Utilitaires &gt ; Firmware Password Utility.
+- Cliquez “Turn On Firmware Password.”
+- Entrez un mot de passe de firmware fort et complexe. Utilisez une combinaison de mots, de symboles et de lettres. Cliquez sur "Set Password". Mémorisez ce mot de passe
+- Vous pouvez maintenant quitter l'utilitaire Firmware Password. Redémarrez votre Mac en cliquant sur le menu \(\) menu &gt ; Redémarrer
 
-### How To Know If Firmware Password Is Working As Intended On OS X
+### Comment savoir si le mot de passe du firmware fonctionne comme prévu sur OS X
 
-The OS X system will request for the firmware password when the user tries to start up from a storage device other than the one chosen in Startup Disk preferences or when booting up from macOS Recovery.
+Le système OS X demandera le mot de passe du firmware lorsque l'utilisateur tente de démarrer à partir d'un périphérique de stockage autre que celui choisi dans les préférences du disque de démarrage ou lors du démarrage à partir de MacOS Recovery.
 
-You’ll see something like this:
+Vous verrez quelque chose comme ça :
 
-![](/assets/guide-to-encrypting-mac-os-x-with-filevault-eight.png)
-
+![guide-to-encrypting-mac-os-x-with-filevault-eight](/assets/guide-to-encrypting-mac-os-x-with-filevault-eight.png)
