@@ -1,20 +1,21 @@
-### Secondary Precautionary Measure: Prevent Attacker With Physical Access To FileVault 2 Encrypted OS X Computer From Taking Your Encryption Key In StandBy Mode
+# Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille
 
-If you are still concerned that an attacker can grab your encryption key from RAM during standby, you may make use of a power management feature in OS X named “**DestroyFVKeyOnStandby**“.
+## Mesure de précaution secondaire : Empêchez l'attaquant avec accès physique à l'ordinateur macOS crypté avec FileVault 2 de prendre votre clé de cryptage en mode veille
 
-“**DestroyFVKeyOnStandBy**” essentially demolishes the FileVault encryption key when proceeding into standby mode.  
-**Altering Sleep Options Using The “pmset” Command.**
+Si vous craignez toujours qu'un pirate puisse s'emparer de votre clé de cryptage depuis la RAM en mode veille, vous pouvez utiliser une fonction de gestion de l'alimentation dans macOS appelée "**DestroyFVKeyOnStandby**".
 
-There are two sleep options available for adjusting:
+"**Détruire une clé FVFVKeyOnStandBy**" démolit essentiellement la clé de cryptage FileVault lorsque vous passez en mode veille.
+**Modification des options de sommeil à l'aide de la commande "pmset"**
 
-| Option | Value | Description |
-| --- | --- | ---: |
-| destroyfvkeyonstandby | 1 | Eliminates the full volume encryption key from memory when the computer is put to sleep and is reliant on the value of hibernate mode. |
-| hibernatemode | 25 | Compels the computer to instantly write memory to disk and also eliminates power from memory upon sleep mode. |
+Deux options de sommeil sont disponibles pour le réglage :
 
-The command to type into Terminal **as the root user** is: `sudo pmset -a destroyfvkeyonstandby 1`
+| Option                | Valeur | Description                                                                                                                                |
+| --------------------- | ------ | -----------------------------------------------------------------------------------------------------------------------------------------: |
+| destroyfvkeyonstandby | 1      | Élimine de la mémoire la clé de cryptage de tout volume lorsque l'ordinateur est mis en veille et dépend de la valeur du mode hibernation. |
+| hibernatemode         | 25     | Oblige l'ordinateur à écrire instantanément de la mémoire sur le disque et élimine également l'alimentation de la mémoire en mode veille.  |
 
-The above command will permit the demolition of the FileVault key in standby mode for every **-a** power mode. \(Charger **-c**, Battery **-b**, and UPS **-u**.\)
+La commande à taper dans le Terminal **en tant qu'utilisateur root** est : `sudo pmset -a destroyfvkeyonstandby 1`
 
-You may also choose to type into Terminal as the root user: `sudo pmset -a destroyfvkeyonstandby 1 hibernatemode 25`
+La commande ci-dessus permettra la démolition de la clé FileVault en mode veille pour chaque mode d'alimentation **-a**. \(Chargeur **-c**, Batterie **-b**, et UPS **-u**.\)
 
+Vous pouvez également choisir de taper dans le Terminal **en tant qu'utilisateur root** : `sudo pmset -a destroyfvkeyonstandby 1 hibernatemode 25`

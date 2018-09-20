@@ -1,6 +1,6 @@
-## Implications et conclusion
+# Implications et conclusion
 
-### Des données correctement cryptées peuvent vaincre n'importe quel adversaire
+## Des données correctement cryptées peuvent vaincre n'importe quel adversaire
 
 Lorsque les données sur le disque sont correctement cryptées, elles ne peuvent être accessibles par aucun adversaire. Cependant, cela ne suffit pas.
 
