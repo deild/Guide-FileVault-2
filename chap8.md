@@ -1,28 +1,26 @@
-## Using A Firmware Password On OS X For Security
+## Implications et conclusion
 
-### Purpose In Enabling A Firmware Password On OS X
+### Des données correctement cryptées peuvent vaincre n'importe quel adversaire
 
-Systems that run OS X can deploy a password for locking OS firmware settings and thwarting inadvertent alterations on firmware situated in a particular system.
+Lorsque les données sur le disque sont correctement cryptées, elles ne peuvent être accessibles par aucun adversaire. Cependant, cela ne suffit pas.
 
-The firmware password is recommended for thwarting motivated adversaries from booting from a different system volume, internal or external storage device other than the initial startup disk you’ve chosen.
+Nous devons également établir ce qui suit :
 
-Notably, utilizing a firmware password thwarts deployment of catch keys to change the cascade of the boot process. Hence, a firmware password obstructs users who don’t possess the password from booting up from any disk other than your chosen startup disk which also prevents the capability to deploy the bulk of startup key combinations.
+- Le cryptage est fort
+- Le mot de passe est fort
+- Le mot de passe n'est pas stocké à un endroit où l'adversaire peut accéder
 
-Furthermore, the firmware password is deployed to impede Direct Memory Access \(DMA\) through interfaces like FireWire. Remember that Target Disk Mode insists on DMA which a firmware password additionally forestalls its utilization on a system. If an adversary tries to mount a volume from an alternative computer that deploys Target Disk Mode, the firmware password has to be entered prior to mounting the volume from the target’s computer.
+Lorsque les mesures susmentionnées sont adoptées et mises en œuvre, tous les adversaires, quel que soit leur niveau de financement et de compétence, peuvent être vaincus.
 
-### How To Set A Firmware Password On An OS X System
+Bien sûr, quelques modifications supplémentaires aux paramètres du système d'exploitation sont nécessaires :
 
-* Boot into the macOS built-in recovery system by holding down Command \(⌘\)-R immediately after turning on your Mac via the power button.
-* The macOS Recovery utilities window will appear. From the menu bar, click on Utilities &gt; Firmware Password Utility.
-* Click “Turn On Firmware Password.”
-* Enter a firmware password that is strong and complex. Use a combination of words, symbols, and letters. Click “Set Password.” Memorize this password.
-* You may now exit the Firmware Password Utility. Restart Your Mac by clicking on the \(\) menu &gt; Restart.
+- Désactiver la connexion automatique
+- Créer un mot de passe différent pour le porte-clés de connexion sur Mac
+- N'oubliez pas de verrouiller le porte-clés de connexion
+- Ne stockez jamais la clé de récupération dans votre compte iCloud avec Apple
 
-### How To Know If Firmware Password Is Working As Intended On OS X
+Toutes ces implémentations et modifications frustreront facilement toute personne intéressée par l'accès aux données sur votre Mac.
 
-The OS X system will request for the firmware password when the user tries to start up from a storage device other than the one chosen in Startup Disk preferences or when booting up from macOS Recovery.
+La seule façon pour les attaquants de "contourner le cryptage complet du disque" est de subvertir votre ordinateur en installant un malware, ce qui est peu courant.
 
-You’ll see something like this:
-
-![](/assets/guide-to-encrypting-mac-os-x-with-filevault-eight.png)
-
+source [https://www.sunnyhoi.com/guide-to-encrypting-securing-mac-os-x-with-filevault-2/](https://www.sunnyhoi.com/guide-to-encrypting-securing-mac-os-x-with-filevault-2/)

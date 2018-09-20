@@ -1,20 +1,10 @@
-### Secondary Precautionary Measure: Prevent Attacker With Physical Access To FileVault 2 Encrypted OS X Computer From Taking Your Encryption Key In StandBy Mode
+## What macOS And FileVault 2 Can’t Protect The Mac User From
 
-If you are still concerned that an attacker can grab your encryption key from RAM during standby, you may make use of a power management feature in OS X named “**DestroyFVKeyOnStandby**“.
+### Cold Boot Attacks
 
-“**DestroyFVKeyOnStandBy**” essentially demolishes the FileVault encryption key when proceeding into standby mode.  
-**Altering Sleep Options Using The “pmset” Command.**
+OS X and FileVault 2 cannot defend against Cold Boot attacks. This is because the encryption keys are stored in memory when the machine is powered on. For instance, the moment you entered your password on boot. This security issue isn’t limited to FileVault 2 full-disk encryption, but to all other software full-disk encryption tools. Thus, there isn’t a publicly acknowledged defensive software against Cold Boot attacks.
 
-There are two sleep options available for adjusting:
+**For security and privacy purposes, power off the computer entirely when you don’t plan on using it.**
 
-| Option | Value | Description |
-| --- | --- | ---: |
-| destroyfvkeyonstandby | 1 | Eliminates the full volume encryption key from memory when the computer is put to sleep and is reliant on the value of hibernate mode. |
-| hibernatemode | 25 | Compels the computer to instantly write memory to disk and also eliminates power from memory upon sleep mode. |
-
-The command to type into Terminal **as the root user** is: `sudo pmset -a destroyfvkeyonstandby 1`
-
-The above command will permit the demolition of the FileVault key in standby mode for every **-a** power mode. \(Charger **-c**, Battery **-b**, and UPS **-u**.\)
-
-You may also choose to type into Terminal as the root user: `sudo pmset -a destroyfvkeyonstandby 1 hibernatemode 25`
+![](/assets/guide-to-encrypting-mac-os-x-with-filevault-sixteen.jpg)
 
