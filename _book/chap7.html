@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur · GitBook</title>
+        <title>Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -105,7 +105,7 @@
 
     
         
-        <li class="header">Cet article est divisé en plusieurs sections clés :</li>
+        <li class="header">Cet article est divisé en plusieurs sections clés</li>
         
         
     
@@ -148,9 +148,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="chap5.html">
+        <li class="chapter " data-level="2.4" data-path="chap4.html">
             
-                <a href="chap5.html">
+                <a href="chap4.html">
             
                     
                     Comment FileVault 2 protège contre les attaquants avec un accès physique à votre ordinateur Mac
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="chap6.html">
+        <li class="chapter " data-level="2.5" data-path="chap5.html">
             
-                <a href="chap6.html">
+                <a href="chap5.html">
             
                     
                     Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille
@@ -174,9 +174,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.6" data-path="chap7.html">
+        <li class="chapter " data-level="2.6" data-path="chap6.html">
             
-                <a href="chap7.html">
+                <a href="chap6.html">
             
                     
                     De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur
@@ -187,9 +187,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="chap8.html">
+        <li class="chapter active" data-level="2.7" data-path="chap7.html">
             
-                <a href="chap8.html">
+                <a href="chap7.html">
             
                     
                     Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité
@@ -200,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="chap9.html">
+        <li class="chapter " data-level="2.8" data-path="chap8.html">
             
-                <a href="chap9.html">
+                <a href="chap8.html">
             
                     
                     Implications et conclusion
@@ -243,7 +243,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur</a>
+        <a href="." >Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité</a>
     </h1>
 </div>
 
@@ -258,11 +258,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="what-macos-and-filevault-2-cant-protect-the-mac-user-from">What macOS And FileVault 2 Can&#x2019;t Protect The Mac User From</h2>
-<h3 id="cold-boot-attacks">Cold Boot Attacks</h3>
-<p>OS X and FileVault 2 cannot defend against Cold Boot attacks. This is because the encryption keys are stored in memory when the machine is powered on. For instance, the moment you entered your password on boot. This security issue isn&#x2019;t limited to FileVault 2 full-disk encryption, but to all other software full-disk encryption tools. Thus, there isn&#x2019;t a publicly acknowledged defensive software against Cold Boot attacks.</p>
-<p><strong>For security and privacy purposes, power off the computer entirely when you don&#x2019;t plan on using it.</strong></p>
-<p><img src="assets/guide-to-encrypting-mac-os-x-with-filevault-sixteen.jpg" alt=""></p>
+                                <h1 id="utilisation-dun-mot-de-passe-de-firmware-sur-macos-par-mesure-de-s&#xE9;curit&#xE9;">Utilisation d&apos;un mot de passe de firmware sur macOS par mesure de s&#xE9;curit&#xE9;</h1>
+<h2 id="but-de-lactivation-dun-mot-de-passe-de-firmware-sur-os-x">But de l&apos;activation d&apos;un mot de passe de firmware sur OS X</h2>
+<p>Les syst&#xE8;mes qui ex&#xE9;cutent OS X peuvent d&#xE9;ployer un mot de passe pour verrouiller les param&#xE8;tres du firmware du syst&#xE8;me d&apos;exploitation et emp&#xEA;cher toute modification involontaire du firmware situ&#xE9; dans un syst&#xE8;me particulier.</p>
+<p>Le mot de passe du firmware est recommand&#xE9; pour emp&#xEA;cher les adversaires motiv&#xE9;s de d&#xE9;marrer &#xE0; partir d&apos;un volume syst&#xE8;me, d&apos;un p&#xE9;riph&#xE9;rique de stockage interne ou externe diff&#xE9;rent de celui du disque de d&#xE9;marrage initial que vous avez choisi.</p>
+<p>Notamment, l&apos;utilisation d&apos;un mot de passe de firmware emp&#xEA;che le d&#xE9;ploiement des cl&#xE9;s de verrouillage pour modifier la cascade du processus de d&#xE9;marrage. Par cons&#xE9;quent, un mot de passe de firmware emp&#xEA;che les utilisateurs qui ne poss&#xE8;dent pas le mot de passe de d&#xE9;marrer &#xE0; partir d&apos;un disque autre que le disque de d&#xE9;marrage que vous avez choisi, ce qui emp&#xEA;che &#xE9;galement la capacit&#xE9; de d&#xE9;ployer la majorit&#xE9; des combinaisons de cl&#xE9;s de d&#xE9;marrage.</p>
+<p>De plus, le mot de passe du firmware est d&#xE9;ploy&#xE9; pour emp&#xEA;cher l&apos;acc&#xE8;s direct &#xE0; la m&#xE9;moire (DMA) via des interfaces comme FireWire. Rappelez-vous que le mode disque cible insiste sur le DMA dont le mot de passe du firmware emp&#xEA;che &#xE9;galement son utilisation sur un syst&#xE8;me. Si un adversaire tente de monter un volume &#xE0; partir d&apos;un autre ordinateur qui d&#xE9;ploie le mode Target Disk, le mot de passe du firmaware doit &#xEA;tre entr&#xE9; avant de monter le volume &#xE0; partir de l&apos;ordinateur de la cible.</p>
+<h2 id="comment-d&#xE9;finir-un-mot-de-passe-de-firmware-sur-un-syst&#xE8;me-os-x">Comment d&#xE9;finir un mot de passe de firmware sur un syst&#xE8;me OS X</h2>
+<ul>
+<li>D&#xE9;marrez dans le syst&#xE8;me de r&#xE9;cup&#xE9;ration int&#xE9;gr&#xE9; de macOS en maintenant la touche Commande (&#x2318;)-R enfonc&#xE9;e imm&#xE9;diatement apr&#xE8;s avoir allum&#xE9; votre Mac via le bouton d&apos;alimentation.</li>
+<li>La fen&#xEA;tre des utilitaires de r&#xE9;cup&#xE9;ration de macOS appara&#xEE;tra. Dans la barre de menu, cliquez sur Utilitaires &amp;gt ; Firmware Password Utility.</li>
+<li>Cliquez &#x201C;Turn On Firmware Password.&#x201D;</li>
+<li>Entrez un mot de passe de firmware fort et complexe. Utilisez une combinaison de mots, de symboles et de lettres. Cliquez sur &quot;Set Password&quot;. M&#xE9;morisez ce mot de passe</li>
+<li>Vous pouvez maintenant quitter l&apos;utilitaire Firmware Password. Red&#xE9;marrez votre Mac en cliquant sur le menu (&#xF8FF;) menu &amp;gt ; Red&#xE9;marrer</li>
+</ul>
+<h2 id="comment-savoir-si-le-mot-de-passe-du-firmware-fonctionne-comme-pr&#xE9;vu-sur-os-x">Comment savoir si le mot de passe du firmware fonctionne comme pr&#xE9;vu sur OS X</h2>
+<p>Le syst&#xE8;me OS X demandera le mot de passe du firmware lorsque l&apos;utilisateur tente de d&#xE9;marrer &#xE0; partir d&apos;un p&#xE9;riph&#xE9;rique de stockage autre que celui choisi dans les pr&#xE9;f&#xE9;rences du disque de d&#xE9;marrage ou lors du d&#xE9;marrage &#xE0; partir de MacOS Recovery.</p>
+<p>Vous verrez quelque chose comme &#xE7;a :</p>
+<p><img src="assets/guide-to-encrypting-mac-os-x-with-filevault-eight.png" alt="guide-to-encrypting-mac-os-x-with-filevault-eight"></p>
 
                                 
                                 </section>
@@ -290,12 +303,12 @@
 
             
                 
-                <a href="chap6.html" class="navigation navigation-prev " aria-label="Previous page: Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille">
+                <a href="chap6.html" class="navigation navigation-prev " aria-label="Previous page: De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="chap8.html" class="navigation navigation-next " aria-label="Next page: Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité">
+                <a href="chap8.html" class="navigation navigation-next " aria-label="Next page: Implications et conclusion">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -306,7 +319,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur","level":"2.6","depth":1,"next":{"title":"Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité","level":"2.7","depth":1,"path":"chap8.md","ref":"chap8.md","articles":[]},"previous":{"title":"Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille","level":"2.5","depth":1,"path":"chap6.md","ref":"chap6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap7.md","mtime":"2018-05-05T10:32:52.870Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-05T10:34:33.660Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité","level":"2.7","depth":1,"next":{"title":"Implications et conclusion","level":"2.8","depth":1,"path":"chap8.md","ref":"chap8.md","articles":[]},"previous":{"title":"De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur","level":"2.6","depth":1,"path":"chap6.md","ref":"chap6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap7.md","mtime":"2018-09-20T11:51:11.148Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-20T14:24:03.202Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -314,10 +327,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>

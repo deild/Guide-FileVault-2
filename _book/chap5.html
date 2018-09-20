@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Comment FileVault 2 protège contre les attaquants avec un accès physique à votre ordinateur Mac · GitBook</title>
+        <title>Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -60,7 +60,7 @@
     <link rel="next" href="chap6.html" />
     
     
-    <link rel="prev" href="chap3.html" />
+    <link rel="prev" href="chap4.html" />
     
 
     </head>
@@ -105,7 +105,7 @@
 
     
         
-        <li class="header">Cet article est divisé en plusieurs sections clés :</li>
+        <li class="header">Cet article est divisé en plusieurs sections clés</li>
         
         
     
@@ -148,9 +148,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="chap5.html">
+        <li class="chapter " data-level="2.4" data-path="chap4.html">
             
-                <a href="chap5.html">
+                <a href="chap4.html">
             
                     
                     Comment FileVault 2 protège contre les attaquants avec un accès physique à votre ordinateur Mac
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="chap6.html">
+        <li class="chapter active" data-level="2.5" data-path="chap5.html">
             
-                <a href="chap6.html">
+                <a href="chap5.html">
             
                     
                     Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille
@@ -174,9 +174,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="chap7.html">
+        <li class="chapter " data-level="2.6" data-path="chap6.html">
             
-                <a href="chap7.html">
+                <a href="chap6.html">
             
                     
                     De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur
@@ -187,9 +187,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="chap8.html">
+        <li class="chapter " data-level="2.7" data-path="chap7.html">
             
-                <a href="chap8.html">
+                <a href="chap7.html">
             
                     
                     Utilisation d'un mot de passe de firmware sur macOS par mesure de sécurité
@@ -200,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="chap9.html">
+        <li class="chapter " data-level="2.8" data-path="chap8.html">
             
-                <a href="chap9.html">
+                <a href="chap8.html">
             
                     
                     Implications et conclusion
@@ -243,7 +243,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Comment FileVault 2 protège contre les attaquants avec un accès physique à votre ordinateur Mac</a>
+        <a href="." >Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille</a>
     </h1>
 </div>
 
@@ -258,7 +258,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="utiliser-destroyfvkeyonstandby-pour-d&#xE9;molir-la-cl&#xE9;-de-cryptage-lorsque-vous-passez-en-mode-veille">Utiliser DestroyFVKeyOnStandBy pour d&#xE9;molir la cl&#xE9; de cryptage lorsque vous passez en mode veille</h1>
+<h2 id="mesure-de-pr&#xE9;caution-secondaire--emp&#xEA;chez-lattaquant-avec-acc&#xE8;s-physique-&#xE0;-lordinateur-macos-crypt&#xE9;-avec-filevault-2-de-prendre-votre-cl&#xE9;-de-cryptage-en-mode-veille">Mesure de pr&#xE9;caution secondaire : Emp&#xEA;chez l&apos;attaquant avec acc&#xE8;s physique &#xE0; l&apos;ordinateur macOS crypt&#xE9; avec FileVault 2 de prendre votre cl&#xE9; de cryptage en mode veille</h2>
+<p>Si vous craignez toujours qu&apos;un pirate puisse s&apos;emparer de votre cl&#xE9; de cryptage depuis la RAM en mode veille, vous pouvez utiliser une fonction de gestion de l&apos;alimentation dans macOS appel&#xE9;e &quot;<strong>DestroyFVKeyOnStandby</strong>&quot;.</p>
+<p>&quot;<strong>D&#xE9;truire une cl&#xE9; FVFVKeyOnStandBy</strong>&quot; d&#xE9;molit essentiellement la cl&#xE9; de cryptage FileVault lorsque vous passez en mode veille.
+<strong>Modification des options de sommeil &#xE0; l&apos;aide de la commande &quot;pmset&quot;</strong></p>
+<p>Deux options de sommeil sont disponibles pour le r&#xE9;glage :</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Valeur</th>
+<th style="text-align:right">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>destroyfvkeyonstandby</td>
+<td>1</td>
+<td style="text-align:right">&#xC9;limine de la m&#xE9;moire la cl&#xE9; de cryptage de tout volume lorsque l&apos;ordinateur est mis en veille et d&#xE9;pend de la valeur du mode hibernation.</td>
+</tr>
+<tr>
+<td>hibernatemode</td>
+<td>25</td>
+<td style="text-align:right">Oblige l&apos;ordinateur &#xE0; &#xE9;crire instantan&#xE9;ment de la m&#xE9;moire sur le disque et &#xE9;limine &#xE9;galement l&apos;alimentation de la m&#xE9;moire en mode veille.</td>
+</tr>
+</tbody>
+</table>
+<p>La commande &#xE0; taper dans le Terminal <strong>en tant qu&apos;utilisateur root</strong> est : <code>sudo pmset -a destroyfvkeyonstandby 1</code></p>
+<p>La commande ci-dessus permettra la d&#xE9;molition de la cl&#xE9; FileVault en mode veille pour chaque mode d&apos;alimentation <strong>-a</strong>. (Chargeur <strong>-c</strong>, Batterie <strong>-b</strong>, et UPS <strong>-u</strong>.)</p>
+<p>Vous pouvez &#xE9;galement choisir de taper dans le Terminal <strong>en tant qu&apos;utilisateur root</strong> : <code>sudo pmset -a destroyfvkeyonstandby 1 hibernatemode 25</code></p>
+
                                 
                                 </section>
                             
@@ -285,12 +315,12 @@
 
             
                 
-                <a href="chap3.html" class="navigation navigation-prev " aria-label="Previous page: Activation du chiffrement complet du disque FileVault 2 (avec modifications de durcissement)">
+                <a href="chap4.html" class="navigation navigation-prev " aria-label="Previous page: Comment FileVault 2 protège contre les attaquants avec un accès physique à votre ordinateur Mac">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="chap6.html" class="navigation navigation-next " aria-label="Next page: Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille">
+                <a href="chap6.html" class="navigation navigation-next " aria-label="Next page: De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -301,7 +331,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Comment FileVault 2 protège contre les attaquants avec un accès physique à votre ordinateur Mac","level":"2.4","depth":1,"next":{"title":"Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille","level":"2.5","depth":1,"path":"chap6.md","ref":"chap6.md","articles":[]},"previous":{"title":"Activation du chiffrement complet du disque FileVault 2 (avec modifications de durcissement)","level":"2.3","depth":1,"path":"chap3.md","ref":"chap3.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap5.md","mtime":"2018-05-05T10:32:52.869Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-05T10:34:33.660Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Utiliser DestroyFVKeyOnStandBy pour démolir la clé de cryptage lorsque vous passez en mode veille","level":"2.5","depth":1,"next":{"title":"De quoi macOS et FileVault 2 ne peut pas protéger l'utilisateur","level":"2.6","depth":1,"path":"chap6.md","ref":"chap6.md","articles":[]},"previous":{"title":"Comment FileVault 2 protège contre les attaquants avec un accès physique à votre ordinateur Mac","level":"2.4","depth":1,"path":"chap4.md","ref":"chap4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap5.md","mtime":"2018-09-20T12:14:11.375Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-20T14:24:03.202Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -309,10 +339,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
