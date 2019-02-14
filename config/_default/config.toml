@@ -1,0 +1,12 @@
+baseURL = "https://guide-filevault-2.netlify.com/"
+languageCode = "fr-fr"
+title = "Guide de chiffrement et de sécurisation de macOS avec FileVault 2"
+theme =  "book"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+disablePathToLower = true
+enableGitInfo = true
+
+[params]
+    BookShowToC = true
+    BookMenuBundle = "/docs/menu"
+    BookRepo = "https://github.com/deild/iGuide-FileVault-2"
