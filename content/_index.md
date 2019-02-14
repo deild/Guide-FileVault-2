@@ -1,5 +1,5 @@
 ---
-title: Mon matériel de photographie
+title: Guide de chiffrement et de sécurisation de macOS avec FileVault 2
 type: docs
 ---
 
