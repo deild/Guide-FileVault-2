@@ -1,7 +1,9 @@
-language: minimal
-os: osx
-before_script:
-  - brew update && brew install hugo
+sudo: false
+language: generic
+go:
+  - 1.13
+install:
+  - go get github.com/gohugoio/hugo
 script:
   - hugo --gc --minify
 branches:
