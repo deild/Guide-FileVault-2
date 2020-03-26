@@ -6,17 +6,19 @@
 ## Versionnement
 
 > Un descriptif de la politique de gestion de version et d'implémentation.
- 
-Ce projet applique la politique [semver] (gestion sémantique de version) et des [messages de commit conventionnels].  
+
+Ce projet applique la politique [semver] (gestion sémantique de version)
+et des [messages de commit conventionnels].
 
 ## le modèle de branchement et de workflow Git pour ce projet
 
 [modèle de branchement et de workflow Git simple]
 
 ## Licence
- 
-Ce projet est disponible sous licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
-Partage dans les Mêmes Conditions 4.0 International ([CC-BY-NC-SA 4.0]).
+
+Ce projet est disponible sous licence Creative Commons Attribution
+– Pas d’Utilisation Commerciale – Partage dans les Mêmes Conditions 4.0
+International ([CC-BY-NC-SA 4.0]).
 
 [semver]: https://semver.org/lang/fr/
 [CC-BY-NC-SA 4.0]: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.fr
