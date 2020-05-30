@@ -9,11 +9,11 @@ VERSION := $(V_PREFIX)$(BASE_STRING)
 
 # use https://github.com/git-chglog/git-chglog
 .PHONY: build
-build: # utilisé pour construire le site
+build: ## utilisé pour construire le site
 	@hugo --gc --minify --quiet
 
 .PHONY: bump
-bump: # incremente la version en fonction de bump=<patch|minor|major>
+bump: ## incremente la version en fonction de bump=<patch|minor|major>
 ifeq ($(bump),major)
     $(eval V_MAJOR := $(shell echo "$$(expr $(V_MAJOR) + 1)"))
     $(eval V_MINOR := 0)
